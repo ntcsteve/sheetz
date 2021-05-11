@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Sheetz</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-scope">
+        <div class="navbar-title">
+          <a href="#">SHEETZ</a></i>
+        </div>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Input</a></li>
+            <li><a href="charts.html">Visualize</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="chart-container">
+      <!-- <p class="chart-title">Daily Time Sheet</p> -->
+      <canvas id="chart"></canvas>
+    </div>
+  </main>
+
+  <script>
+    // Global Options
+    Chart.defaults.font.family = 'Arial';
+    Chart.defaults.font.size = 18;
+    Chart.defaults.font.color = '#2C2C2C';
+
+    let myChart = document.getElementById('chart').getContext('2d');
+
+    let timeSheetChart = new Chart(myChart, {
+      type: 'doughnut',
+      data: {
+        labels: ['Administrative Tasks', 'Client Meetings', 'Team Meetings', 'Travel', 'Research'],
+        datasets: [{
+          label: 'Hours Spend',
+          data: [
+            2,
+            3,
+            1.5,
+            0.5,
+            2
+          ],
+          backgroundColor: [
+            '#0069CE',
+            '#0AB0BF',
+            '#66E6A8',
+            '#FF4E00',
+            '#FD9E32',
+          ],
+          borderWidth: 1,
+          borderColor: '#666666',
+          hoverBorderWidth: 4,
+          hoverBorderColor: '#2C2C2C'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          // The chart title defines text to draw at the top of the chart.
+          title: {
+            display: true,
+            text: 'Daily Time Sheet',
+            padding: {
+              bottom: 20
+            },
+            font: {
+              size: 20
+            }
+          },
+          // The chart legend displays data about the datasets that are appearing on the chart.
+          legend: {
+            display: true,
+            position: 'bottom'
+          },
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

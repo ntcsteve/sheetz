@@ -1,0 +1,22 @@
+.container-card {
+  max-width: 500px;
+  margin: 1vh auto;
+  padding: 1em;
+  line-height: 1.6;
+}
+
+.navbar-title a {
+  font-size: 1.2rem;
+  padding: 0.7em;
+}
+
+.navbar-links a {
+  font-size: 1rem;
+  padding: 0.8em;
+}
+
+.chart-container {
+  margin: 3vh auto;
+  height:60vh;
+  width:60vw;
+}
