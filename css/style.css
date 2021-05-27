@@ -23,12 +23,13 @@ body {
   color: var(--charcoal);
 }
 
-.navbar {
+.navbar-top {
   background-color: var(--darkteal);
-  overflow: auto;
+  overflow: fixed;
+  top: 0;
 }
 
-.navbar-scope {
+.navbar-scope-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,14 +38,36 @@ body {
   height: 10%;
 }
 
-.navbar-title a, .navbar-links a {
+.navbar-bottom {
+  background-color: var(--darkteal);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar-scope-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1200px;
+  height: 10%;
+}
+
+.navbar-main a, .navbar-links a, .navbar-reset a {
   text-decoration: none;
   color: var(--white);
   margin: 0 0.1em;
 }
 
-.navbar-title a {
+.navbar-main a {
   font-size: 1.5rem;
+  padding: 1em;
+}
+
+.navbar-reset a {
+  display: block;
+  font-size: 1.2rem;
   padding: 1em;
 }
 
@@ -87,6 +110,20 @@ p {
   padding: 1em;
   border: var(--darkteal) 1px solid;
   border-radius: 5px;
+}
+
+.sheetz-item {
+  background-color: var(--darkteal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.2em;
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.6em;
+  cursor: pointer;
 }
 
 .btn {

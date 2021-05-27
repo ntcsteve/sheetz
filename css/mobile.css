@@ -15,6 +15,12 @@
   padding: 0.8em;
 }
 
+.navbar-reset a {
+  display: block;
+  font-size: 1rem;
+  padding: 0.8em;
+}
+
 .chart-container {
   margin: 3vh auto;
   height:60vh;

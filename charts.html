@@ -14,10 +14,10 @@
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="navbar-scope">
-        <div class="navbar-title">
-          <a href="index.html">SHEETZ</a></i>
+    <nav class="navbar-top">
+      <div class="navbar-scope-top">
+        <div class="navbar-main">
+          <a href="index.html">SHEETZ</a>
         </div>
         <div class="navbar-links">
           <ul>
@@ -36,64 +36,18 @@
     </div>
   </main>
 
-  <script>
-    // Global Options
-    Chart.defaults.font.family = 'Arial';
-    Chart.defaults.font.size = 18;
-    Chart.defaults.font.color = '#2C2C2C';
+  <footer>
+    <nav class="navbar-bottom">
+      <div class="navbar-scope-bottom">
+        <div class="navbar-reset">
+          <a href="index.html" id="reset" onclick="clearAll()"">Inspired By Meryl Rowlands, EBBC</a>
+        </div>
+      </div>
+    </nav>
+  </footer>
 
-    let myChart = document.getElementById('chart').getContext('2d');
-
-    let timeSheetChart = new Chart(myChart, {
-      type: 'doughnut',
-      data: {
-        labels: ['Administrative Tasks', 'Client Meetings', 'Team Meetings', 'Travel', 'Research'],
-        datasets: [{
-          label: 'Hours Spend',
-          data: [
-            2,
-            3,
-            1.5,
-            0.5,
-            2
-          ],
-          backgroundColor: [
-            '#0069CE',
-            '#0AB0BF',
-            '#66E6A8',
-            '#FF4E00',
-            '#FD9E32',
-          ],
-          borderWidth: 1,
-          borderColor: '#666666',
-          hoverBorderWidth: 4,
-          hoverBorderColor: '#2C2C2C'
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          // The chart title defines text to draw at the top of the chart.
-          title: {
-            display: true,
-            text: 'Daily Time Sheet',
-            padding: {
-              bottom: 20
-            },
-            font: {
-              size: 20
-            }
-          },
-          // The chart legend displays data about the datasets that are appearing on the chart.
-          legend: {
-            display: true,
-            position: 'bottom'
-          },
-        }
-      }
-    });
-  </script>
 </body>
+
+<script src=" charts.js"></script>
 
 </html>
